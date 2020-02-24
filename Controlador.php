@@ -9,7 +9,7 @@ function  DevolverRegistroDato($consulta)
     return $resultset;
 }
 
-function Cabecera($cabecera)
+function CabeceraTabla($cabecera)
 {
     echo ("<div class='container'>"
         . "<div class='row'>"
@@ -28,7 +28,7 @@ function Cabecera($cabecera)
 function LenarTabla($consulta, $arreglo, $longitud)
 {
     $registro = DevolverRegistroDato($consulta);
-    Cabecera($arreglo);
+    CabeceraTabla($arreglo);
 
     while ($fila = mysqli_fetch_row($registro)) {
         echo "<tr>";
@@ -41,4 +41,3 @@ function LenarTabla($consulta, $arreglo, $longitud)
         . "</table>" . "</div>" . "</div>"
         . "</div>" . "</div>");
 }
-
